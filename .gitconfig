@@ -1,0 +1,33 @@
+[user]
+  name = Cybera Sysadmin
+  email = sysadmin@cybera.ca
+
+[core]
+  filemode = false
+
+[color]
+  ui = auto
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+
+[branch "master"]
+  mergeoptions = --no-ff
+
+[branch "sandbox"]
+  mergeoptions = --no-ff
+
+[merge]
+  log = true
+  tool = fugitive
+
+[mergetool "fugitive"]
+  cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  df = diff
+  lg = log -p
