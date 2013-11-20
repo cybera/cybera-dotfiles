@@ -32,5 +32,7 @@
   df = diff
   lg = log -p
 
-[push]
-  default = simple
+# Uncomment once we upgrade git past 1.7.9.11 (currently 1.7.9.5 installed with LTS - no reason to upgrade ahead of LTS schedule)
+#[push]
+#  default = simple
+
