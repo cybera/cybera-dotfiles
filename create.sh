@@ -4,6 +4,7 @@
 
 ########## Variables
 
+dir=/root/puppet-dotfiles
 files=`cd $dir; ls -d .[a-z]* | grep -v .git$`    # list of files/folders to symlink in homedir
 
 ##########
