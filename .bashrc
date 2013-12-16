@@ -10,6 +10,8 @@ else
     PS1="[ \u@\h \w ] $ "
 fi
 
+alias tmuxmicheal='tmux -S mcjones -f /root/.tmux.conf.mcjones'
+
 # Ignore duplicate history entries
 HISTCONTROL=ignoreboth
 
