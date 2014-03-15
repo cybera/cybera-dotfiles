@@ -15,6 +15,5 @@ alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
 # Ignore duplicate history entries
 HISTCONTROL=ignoreboth
 
-# Hiera YAML shortcuts
-function yamlc() { ruby -e "require 'yaml'; YAML.parse(File.open('$1'))"; }
-function hierapp() { ruby -e "require 'pp'; pp(eval(ARGF.read))"; }
+# LXC aliases
+alias lls="lxc-ls --fancy"
