@@ -17,3 +17,4 @@ HISTCONTROL=ignoreboth
 
 # LXC aliases
 alias lls="lxc-ls --fancy"
+alias la="lxc-attach -n $1"
