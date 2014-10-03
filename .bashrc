@@ -18,8 +18,8 @@ HISTCONTROL=ignoreboth
 # LXC aliases
 alias lls="lxc-ls --fancy"
 alias la="lxc-attach -n $1"
-alias rnova="for i in api cert conductor consoleauth novncproxy objectstore scheduler; do service nova-$i restart; done"
-alias rswift="for i in account-auditor account account-reaper account-replicator container-auditor container container-replicator container-updater object-auditor object object-replicator object-updater; do service swift-$i restart; done"
-alias rcinder="for i in scheduler api; do service cinder-$i restart; done"
-alias rcompute="for i in nova-compute nova-network nova-api-metadata cinder-volume; do service $i restart; done"
-alias rglance=" for i in api registry; do service glance-$i restart; done"
+alias rnova="for i in api cert conductor consoleauth novncproxy objectstore scheduler; do service nova-\$i restart; done"
+alias rswift="for i in account-auditor account account-reaper account-replicator container-auditor container container-replicator container-updater object-auditor object object-replicator object-updater; do service swift-\$i restart; done"
+alias rcinder="for i in scheduler api; do service cinder-\$i restart; done"
+alias rcompute="for i in nova-compute nova-network nova-api-metadata cinder-volume; do service \$i restart; done"
+alias rglance=" for i in api registry; do service glance-\$i restart; done"
