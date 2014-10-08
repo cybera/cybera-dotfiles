@@ -14,6 +14,12 @@ for file in $files; do
     ln -fs $dir/$file /root/$file
 done
 
-# git submodules (vim)
-git submodule init
-git submodule update
+mkdir -p ~/.vim/bundle
+cd ~/.vim/bundle
+git clone https://github.com/tpope/vim-fugitive
+git clone https://github.com/msanders/snipmate.vim snipmate
+git clone https://github.com/godlygeek/tabular
+git clone https://github.com/scrooloose/syntastic
+git clone https://github.com/rodjek/vim-puppet puppet
+git clone https://github.com/vim-ruby/vim-ruby
+git clone https://github.com/hallison/vim-markdown.git
