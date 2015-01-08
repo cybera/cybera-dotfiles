@@ -22,8 +22,8 @@ set -g base-index 1
 bind | split-window -h
 bind - split-window -v
 
-set -g set-titles on
-set -g set-titles-string '#(whoami)@#(hostname)'
+#set -g set-titles on
+#set -g set-titles-string '#(whoami)@#(hostname)'
 
 set -g status-utf8 on
 set -g status-left-length 40
@@ -39,6 +39,9 @@ unbind Up
 bind Up new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom \; select-window -t tmux-zoom
 unbind Down
 bind Down last-window \; swap-pane -s tmux-zoom \; kill-window -t tmux-zoom
+
+#Stop resorting panes.
+unbind ^o
 
 #vim based pane navigation
 unbind-key j
