@@ -9,15 +9,17 @@ bind -t vi-copy v begin-selection
 bind -t vi-copy y copy-selection
 
 # Mac only items (http://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future)
-#set-option -g default-command "reattach-to-user-namespace -l bash"
+#set-option -g default-command "reattach-to-user-namespace -l zsh"
 #bind-key -t vi-copy v begin-selection
 #bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 #unbind -t vi-copy Enter
 #bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+#set-option -g default-shell /bin/zsh
 
-bind r source-file ~/.tmux.conf.mcjones \; display "Reloaded!"
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
 
 set -g base-index 1
+set-option -g allow-rename off
 
 bind | split-window -h
 bind - split-window -v
@@ -35,13 +37,12 @@ set -g status-left '#[fg=white,bg=black,bold] #S #[fg=yellow,bg=black,nobold] #H
 set -g status-right '%Y-%m-%d %H:%M '
 set -g window-status-current-format " #I #W "
 
-unbind Up
-bind Up new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom \; select-window -t tmux-zoom
-unbind Down
-bind Down last-window \; swap-pane -s tmux-zoom \; kill-window -t tmux-zoom
+unbind-key ^o
 
-#Stop resorting panes.
-unbind ^o
+#unbind Up
+#bind Up new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom \; select-window -t tmux-zoom
+#unbind Down
+#bind Down last-window \; swap-pane -s tmux-zoom \; kill-window -t tmux-zoom
 
 #vim based pane navigation
 unbind-key j
