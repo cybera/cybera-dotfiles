@@ -12,11 +12,12 @@
   branch = auto
   interactive = auto
 
-[branch "master"]
+[branch]
+  autosetuprebase = always
   mergeoptions = --no-ff
 
-[branch "sandbox"]
-  mergeoptions = --no-ff
+[pull]
+  rebase = true
 
 [merge]
   log = true
