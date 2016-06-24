@@ -23,3 +23,5 @@ alias rswift="for i in account-auditor account account-reaper account-replicator
 alias rcinder="for i in scheduler api; do service cinder-\$i restart; done"
 alias rcompute="for i in nova-compute nova-network nova-api-metadata cinder-volume; do service \$i restart; done"
 alias rglance=" for i in api registry; do service glance-\$i restart; done"
+
+function forgetnode { puppet cert clean $1; puppet node deactivate $1; puppet node clean $1; }
