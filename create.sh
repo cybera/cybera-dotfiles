@@ -4,14 +4,14 @@
 
 ########## Variables
 
-dir=/root/cybera-dotfiles
+dir=~/cybera-dotfiles
 files=`cd $dir; ls -d .[a-z]* | grep -v .git$`    # list of files/folders to symlink in homedir
 
 ##########
 
 # Create symlinks
 for file in $files; do
-    ln -fs $dir/$file /root/$file
+    ln -fs $dir/$file ~/$file
 done
 
 mkdir -p ~/.vim/bundle
