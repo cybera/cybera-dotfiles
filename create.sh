@@ -14,6 +14,10 @@ for file in $files; do
     ln -fs $dir/$file ~/$file
 done
 
+# Install pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+# Install vim plugins
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle
 git clone https://github.com/tpope/vim-fugitive
