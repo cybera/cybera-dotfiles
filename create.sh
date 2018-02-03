@@ -20,10 +20,10 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 # Install vim plugins
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle
-git clone https://github.com/tpope/vim-fugitive
-git clone https://github.com/msanders/snipmate.vim snipmate
-git clone https://github.com/godlygeek/tabular
-git clone https://github.com/scrooloose/syntastic
-git clone https://github.com/rodjek/vim-puppet puppet
-git clone https://github.com/vim-ruby/vim-ruby
-git clone https://github.com/hallison/vim-markdown.git
+git clone -q https://github.com/tpope/vim-fugitive
+git clone -q https://github.com/msanders/snipmate.vim snipmate
+git clone -q https://github.com/godlygeek/tabular
+git clone -q https://github.com/scrooloose/syntastic
+git clone -q https://github.com/rodjek/vim-puppet puppet
+git clone -q https://github.com/vim-ruby/vim-ruby
+git clone -q https://github.com/hallison/vim-markdown.git
