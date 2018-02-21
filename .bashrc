@@ -30,6 +30,7 @@ alias rcinder="for i in scheduler api; do service cinder-\$i restart; done"
 alias rcompute="for i in nova-compute nova-network nova-api-metadata cinder-volume; do service \$i restart; done"
 alias rglance="for i in api registry; do service glance-\$i restart; done"
 alias rdesignate="for i in api agent central mdns pool-manager sink; do service designate-\$i restart; done"
+alias rneutron="for i in dhcp-agent l3-agent linuxbridge-agent metadata-agent server; do service neutron-\$i restart; done"
 
 oscurl() {
   token=$(openstack token issue -c id -f value)
