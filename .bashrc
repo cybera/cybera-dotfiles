@@ -3,7 +3,10 @@ if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
 fi
 
-export PATH=~/cybera-dotfiles/bin:/snap/bin:$PATH
+uname=$(uname)
+if [[ "${uname}" == "Linux" ]]; then
+  export PATH=~/cybera-dotfiles/bin:/snap/bin:$PATH
+fi
 
 # Set a basic prompt
 if [ $UID -eq 0 ]; then
