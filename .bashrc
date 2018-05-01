@@ -3,7 +3,7 @@ if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
 fi
 
-export PATH=/snap/bin:$PATH
+export PATH=~/cybera-dotfiles/bin:/snap/bin:$PATH
 
 # Set a basic prompt
 if [ $UID -eq 0 ]; then
