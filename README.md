@@ -2,7 +2,7 @@
 
 Repository of dotfiles used by Cybera on the various servers.
 
-Uses create.she to symlink the files.
+Uses create.sh to symlink the files.
 
 .gitconfig
 .gitignore
