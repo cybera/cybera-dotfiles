@@ -28,3 +28,4 @@ git clone -q https://github.com/rodjek/vim-puppet puppet
 git clone -q https://github.com/vim-ruby/vim-ruby
 git clone -q https://github.com/hallison/vim-markdown.git
 git clone -q https://github.com/fatih/vim-hclfmt
+git clone -q https://github.com/hashivim/vim-hashicorp-tools
