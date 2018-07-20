@@ -16,8 +16,8 @@ else
 fi
 
 alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
-alias tmuxanna='tmux -S /tmp/anna.tmux -f /root/.tmux.conf'
 alias megacli='/root/bin/Linux/opt/MegaRAID/MegaCli/MegaCli64'
+alias tmuxanna='tmux -S /tmp/anna.tmux -f /root/.tmux.conf.anna'
 
 export EDITOR=/usr/bin/vim
 
@@ -36,6 +36,7 @@ alias rcompute="for i in nova-compute nova-network nova-api-metadata cinder-volu
 alias rglance="for i in api registry; do service glance-\$i restart; done"
 alias rdesignate="for i in api agent central mdns pool-manager sink; do service designate-\$i restart; done"
 alias rneutron="for i in dhcp-agent l3-agent linuxbridge-agent metadata-agent server; do service neutron-\$i restart; done"
+alias st2_lookup="st2 run rac.project_artifacts"
 
 oscurl() {
   token=$(openstack token issue -c id -f value)
