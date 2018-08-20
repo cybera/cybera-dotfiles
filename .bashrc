@@ -17,7 +17,7 @@ fi
 
 alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
 alias megacli='/root/bin/Linux/opt/MegaRAID/MegaCli/MegaCli64'
-alias tmuxanna='tmux -S /tmp/anna.tmux -f /root/.tmux.confi.anna'
+alias tmuxanna='tmux -S /tmp/anna.tmux -f /root/.tmux.conf.anna'
 
 export EDITOR=/usr/bin/vim
 
