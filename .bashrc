@@ -21,6 +21,9 @@ alias tmuxanna='tmux -S /tmp/anna.tmux -f /root/.tmux.conf.anna'
 
 export EDITOR=/usr/bin/vim
 
+# Path tweaks for Puppet 6
+export PATH=$PATH:/opt/puppetlabs/bin
+
 # Ignore duplicate history entries
 HISTCONTROL=ignoreboth
 
