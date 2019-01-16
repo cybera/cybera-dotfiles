@@ -4,9 +4,6 @@
 set -g status-keys vi
 setw -g mode-keys vi
 bind Escape copy-mode
-#Linux copy settings
-bind -t vi-copy v begin-selection
-bind -t vi-copy y copy-selection
 
 bind r source-file ~/.tmux.conf.mcjones \; display "Reloaded!"
 

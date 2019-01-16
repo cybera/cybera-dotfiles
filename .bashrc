@@ -49,4 +49,5 @@ oscurl() {
 }
 
 function forgetnode { puppet cert clean $1; puppet node deactivate $1; puppet node clean $1; }
+function forgetnode6 { puppetserver ca cert clean $1; puppet node deactivate $1; puppet node clean $1; }
 PATH=$PATH:/root/novac/bin
