@@ -35,7 +35,7 @@ alias la="lxc-attach -n $1"
 alias megacli='/root/bin/Linux/opt/MegaRAID/MegaCli/MegaCli64'
 
 # OpenStack aliases
-alias rnova="for i in api cert conductor consoleauth novncproxy scheduler; do service nova-\$i restart; done"
+alias rnova="for i in api cert conductor consoleauth novncproxy scheduler; do service nova-\$i restart; done; service apache2 restart;"
 alias rswift="for i in account-auditor account account-reaper account-replicator container-auditor container container-replicator container-updater object-auditor object object-replicator object-updater; do service swift-\$i restart; done"
 alias rcinder="for i in scheduler api; do service cinder-\$i restart; done"
 alias rglance="for i in api registry; do service glance-\$i restart; done"
