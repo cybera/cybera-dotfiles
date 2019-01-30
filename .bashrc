@@ -17,7 +17,6 @@ fi
 
 # tmux helpers
 alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
-alias tmuxanna='tmux -S /tmp/anna.tmux -f /root/.tmux.conf.anna'
 
 export EDITOR=/usr/bin/vim
 
