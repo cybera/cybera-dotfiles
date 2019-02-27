@@ -27,8 +27,10 @@ export PATH=$PATH:/opt/puppetlabs/bin
 HISTCONTROL=ignoreboth
 
 # LXC aliases
-alias lls="lxc-ls --fancy"
-alias la="lxc-attach -n $1"
+alias lls="lxc ls"
+function la() {
+  lxc exec $1 bash
+}
 
 # App aliases
 alias megacli='/root/bin/Linux/opt/MegaRAID/MegaCli/MegaCli64'
@@ -42,7 +44,7 @@ alias rdesignate="for i in api agent central mdns pool-manager sink; do service 
 alias rneutron="for i in dhcp-agent l3-agent linuxbridge-agent metadata-agent server; do service neutron-\$i restart; done"
 alias st2_lookup="st2 run rac.project_artifacts"
 
-oscurl() {
+function oscurl() {
   token=$(openstack token issue -c id -f value)
   curl -s -H "X-Auth-Token:$token" $1
 }
