@@ -52,3 +52,10 @@ function oscurl() {
 function forgetnode { puppet cert clean $1; puppet node deactivate $1; puppet node clean $1; }
 function forgetnode6 { puppetserver ca clean --certname $1; puppet node deactivate $1; puppet node clean $1; }
 PATH=$PATH:/root/novac/bin
+
+function newsshhost {
+  ssh-keygen -f ~/.ssh/known_hosts -R $1
+  ip=$(grep $1 /etc/hosts | awk '{print $1}')
+  ssh-keygen -f ~/.ssh/known_hosts -R $ip
+  ssh-keyscan -t ecdsa $1 >> ~/.ssh/known_hosts
+}
