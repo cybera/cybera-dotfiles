@@ -56,6 +56,16 @@ PATH=$PATH:/root/novac/bin
 function newsshhost {
   ssh-keygen -f ~/.ssh/known_hosts -R $1
   ip=$(grep $1 /etc/hosts | awk '{print $1}')
-  ssh-keygen -f ~/.ssh/known_hosts -R $ip
+  if [[ -n $ip ]]; then
+    ssh-keygen -f ~/.ssh/known_hosts -R $ip
+  fi
+  ip=$(dig -t a +short $1)
+  if [[ -n $ip ]]; then
+    ssh-keygen -f ~/.ssh/known_hosts -R $ip
+  fi
+  ip=$(dig -t aaaa +short $1)
+  if [[ -n $ip ]]; then
+    ssh-keygen -f ~/.ssh/known_hosts -R $ip
+  fi
   ssh-keyscan -t ecdsa $1 >> ~/.ssh/known_hosts
 }
