@@ -36,9 +36,9 @@ function la() {
 alias megacli='/root/bin/Linux/opt/MegaRAID/MegaCli/MegaCli64'
 
 # OpenStack aliases
-alias rnova="for i in api cert conductor consoleauth novncproxy scheduler; do service nova-\$i restart; done; service apache2 restart;"
+alias rnova="for i in api conductor consoleauth novncproxy scheduler; do service nova-\$i restart; done; service apache2 restart;"
 alias rswift="for i in account-auditor account account-reaper account-replicator container-auditor container container-replicator container-updater object-auditor object object-replicator object-updater; do service swift-\$i restart; done"
-alias rcinder="for i in scheduler api; do service cinder-\$i restart; done"
+alias rcinder="for i in scheduler ; do service cinder-\$i restart; done; service apache2 restart"
 alias rglance="for i in api registry; do service glance-\$i restart; done"
 alias rdesignate="for i in api agent central mdns pool-manager sink; do service designate-\$i restart; done"
 alias rneutron="for i in dhcp-agent l3-agent linuxbridge-agent metadata-agent server; do service neutron-\$i restart; done"
