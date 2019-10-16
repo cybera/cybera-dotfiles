@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#Modified script from Joe to symlink in dotfiles and keep Git happy using it's own directory.
-
+# Modified script from Joe to symlink in dotfiles and keep Git happy using it's own directory.
+# Shawn ToDo: update README to include usage instructions
 ########## Variables
 
 dir=~/cybera-dotfiles
