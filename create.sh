@@ -9,16 +9,6 @@ files=`cd $dir; ls -d .[a-z]* | grep -v .git$`    # list of files/folders to sym
 
 ##########
 
-while true; do
-    read -p "Do you wish to install Shawn's fancy crap?" yn
-    case $yn in
-        [Yy]* ) source shawn.sh; break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-
-
 # Create symlinks
 for file in $files; do
     ln -fs $dir/$file ~/$file
