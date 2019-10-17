@@ -2,7 +2,7 @@
 # | \e[36mla\e[0m             List Aliases                      | \e[36msystatus\e[0m       System Stats                           |
 # | \e[36mports\e[0m          List all tcp/udp open ports       | \e[36msyslog\e[0m         Monitor the Syslog Log File            |
 # | \e[36mmyssh\e[0m          Show SSH Aliases                  | \e[36mtodos\e[0m          List TODOs from the Current Project    |
-# | \e[36mhwsensors\e[0m      Check Hardware Sensors            | \e[36mmyip\e[0m           Get public IP Address                  |
+# | \e[36mhwsensors\e[0m      Check Hardware Sensors            | \e[36mmyip\e[0m           Get public IP Address [-4(def)  or -6] |
 # | \e[36mhttpd\e[0m          Start Py Web Server Here          | \e[36mextract\e[0m        Universal Compressed File Extractor    |
 # | \e[36mgenpass\e[0m        Generate Random Password          | \e[36mmessages\e[0m       Monitor /var/log/messages              |
 # | \e[36mpydf\e[0m           Fancy df                          | \e[36mbc\e[0m             Command Line Calculator                |
