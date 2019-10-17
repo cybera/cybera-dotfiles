@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#Modified script from Joe to symlink in dotfiles and keep Git happy using it's own directory.
-
+# Modified script from Joe to symlink in dotfiles and keep Git happy using it's own directory.
+# Shawn ToDo: update README to include usage instructions
 ########## Variables
 
 dir=~/cybera-dotfiles
@@ -29,3 +29,4 @@ git clone -q https://github.com/vim-ruby/vim-ruby
 git clone -q https://github.com/hallison/vim-markdown.git
 git clone -q https://github.com/fatih/vim-hclfmt
 git clone -q https://github.com/hashivim/vim-hashicorp-tools
+

@@ -1,0 +1,2 @@
+alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
+alias tmux='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
