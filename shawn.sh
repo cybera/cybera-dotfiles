@@ -27,7 +27,7 @@ sleep 2
 # cp -f home/.tmux.conf ~/  > /dev/null
 # cp -f home/.vimrc ~/  > /dev/null
 cp -rf home/.tmux-themepack ~/  > /dev/null
-cp -ruf home/.vim ~/  > /dev/null
+# cp -ruf home/.vim ~/  > /dev/null
 echo -ne '###                       (10%) Checking the gravitational constant in your locale...          \r'
 sleep 2
 
@@ -42,29 +42,29 @@ echo -ne '####                      (20%) Shovelling coal into the server...    
 sleep 2
 
 # Install all software that is needed
-apt-get update  > /dev/null
+# apt-get update  > /dev/null
 echo -ne '###########               (50%) Warming up Large Hadron Collider...                          \r'
 sleep 2
 
-aptcheck=(lm-sensors unrar unzip cabextract curl netstat pydf mc w3m landscape-common figlet colordiff)
-toinstall=""
-for i in ${aptcheck[@]}
-do
+# aptcheck=(lm-sensors unrar unzip cabextract curl netstat pydf mc w3m landscape-common figlet colordiff)
+# toinstall=""
+# for i in ${aptcheck[@]}
+# do
   # echo "${i}"
-  package="$(which ${i})"
-  if [ -z "$package" ] ; then
-    toinstall="$toinstall $i"
-  fi
-done
+#  package="$(which ${i})"
+#  if [ -z "$package" ] ; then
+#    toinstall="$toinstall $i"
+#  fi
+#done
 echo -ne '##################        (75%) It is pitch black. You are likely to be eaten by a grue.        \r'
 sleep 2
 
 # echo " installing ${toinstall}"
-if [ -z "$toinstall" ] ; then
-  echo -ne '##################        (75%) It is pitch black. You are likely to be eaten by a grue.       \r'
-else
-  sudo apt-get install ${toinstall} -y  > /dev/null
-fi
+#if [ -z "$toinstall" ] ; then
+#  echo -ne '##################        (75%) It is pitch black. You are likely to be eaten by a grue.       \r'
+#else
+#  sudo apt-get install ${toinstall} -y  > /dev/null
+#fi
 
 # cp -f home/bin/notes /bin  > /dev/null
 echo -ne '######################### (90%) Testing data on Timmy... ... ... We are going to need another Timmy.         \r'
