@@ -17,8 +17,10 @@ fi
 
 # tmux helpers (moving this to setup script)
 # alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
-run-parts --lsbsysinit /etc/update-motd.d
-/
+if [[ -f /etc/update-motd.d ]]; then
+  run-parts --lsbsysinit /etc/update-motd.d
+fi
+
 # Include aliases
 function shawn {
   if [ -f ~/.bash_aliases ]; then
