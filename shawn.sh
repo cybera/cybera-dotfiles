@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Shawn Ayotte - Cybera 2019
-# This script is used to install Shawn Ayotte's environment. 
+# This script is used to install Shawn Ayotte's environment.
 
 # Make sure we are running elevated
 if [ "$EUID" -ne 0 ]
@@ -11,9 +11,9 @@ fi
 
 # Ask The user questions about the setup (Cybera Dotfiles)
 # Install Cybera dots?
-# Use Joe, Michael, Shawn, or all for tmux
+# Use Joe, Micheal, Shawn, or all for tmux
 # Use Vim plugins from Cybera
-# 
+#
 
 clear
 echo -ne '#                         (01%) You are SUDO! You pass the first test!                       \r'
@@ -31,7 +31,7 @@ cp -ruf home/.vim ~/  > /dev/null
 echo -ne '###                       (10%) Checking the gravitational constant in your locale...          \r'
 sleep 2
 
-# Copy new MOTD and disable the ones we don't want 
+# Copy new MOTD and disable the ones we don't want
 cp -f home/update-motd.d/* /etc/update-motd.d/
 # rm -f /etc/motd > /dev/null
 chmod -x /etc/update-motd.d/51-cloudguest || true
@@ -72,5 +72,5 @@ sleep 2
 
 clear
 
-# Wrap up and tell user to use la 
+# Wrap up and tell user to use la
 printf "Installation complete. Please use 'source ~/.bashrc' then type 'la' to get started!\n--Shawn Ayotte\n"

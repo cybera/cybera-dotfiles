@@ -15,7 +15,7 @@ Uses create.sh to symlink the files.
 .vimrc
 
 ## Configure
-There are 4 alias files that are included, once for Cybera, and one each for Joe, Michael and Shawn. To load your aliases simply type your name.
+There are 4 alias files that are included, once for Cybera, and one each for Joe, Micheal and Shawn. To load your aliases simply type your name.
 
 If you would like your alias file loaded by default add these lines to your .ssh/config:
 

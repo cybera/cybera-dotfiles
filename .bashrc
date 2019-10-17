@@ -30,9 +30,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases_cybera
 fi
 
-function michael {
+function micheal {
   if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases_michael
+    . ~/.bash_aliases_micheal
   fi
 }
 
