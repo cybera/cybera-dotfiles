@@ -1,2 +1,3 @@
+.bashrc.local
 .vim/bundle/*
 .vim/.netrwhist

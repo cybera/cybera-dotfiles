@@ -42,10 +42,12 @@ set pastetoggle=<F5>
 " Turn plugin on
 filetype plugin indent on
 
-set foldenable
-set foldmarker={,}
-set foldmethod=marker
-set foldlevel=100
+if executable("vi")
+  set foldenable
+  set foldmarker={,}
+  set foldmethod=marker
+  set foldlevel=100
+endif
 set listchars=tab:>-,trail:-
 set statusline=%F%m%r%h%w\ %y\ %=[%l/%L,%04v](%p%%)
 set laststatus=2

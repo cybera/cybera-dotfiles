@@ -5,7 +5,7 @@ fi
 
 uname=$(uname)
 if [[ "${uname}" == "Linux" ]]; then
-  export PATH=~/cybera-dotfiles/bin:/snap/bin:$PATH
+  export PATH=~/cybera-dotfiles/bin:/snap/bin:~/.local/bin:$PATH
 fi
 
 # Set a basic prompt
