@@ -16,7 +16,8 @@ else
 fi
 
 # tmux helpers
-alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f /root/.tmux.conf.mcjones'
+alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f ~/.tmux.conf.mcjones'
+alias tmuxanyinke='tmux -S /tmp/anyinke.tmux -f ~/.tmux.conf.mcjones'
 
 export EDITOR=/usr/bin/vim
 
