@@ -1,34 +1,53 @@
-# tmux config for micheal
-#
+# Micheal's tmux config
+
+# unbind default prefix and set it to ctrl-a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
 #Copy and Paste items first up
 set -g status-keys vi
 setw -g mode-keys vi
 bind Escape copy-mode
+bind-key -T copy-mode-vi 'v' send-keys -X begin-selection
+bind-key -T copy-mode-vi 'y' send-keys -X copy-selection
 
 bind r source-file ~/.tmux.conf.mcjones \; display "Reloaded!"
 
+set -s escape-time 1
+
+# Set base indexes
 set -g base-index 1
+setw -g pane-base-index 1
+
 set-option -g allow-rename off
 
-bind | split-window -h
-bind - split-window -v
+# y = synchronize
+bind y setw synchronize-panes
 
-set -g status-utf8 on
+# Panes!
+# % and | split vertically
+bind | split-window -h
+bind \ split-window -h -c "#{pane_current_path}"
+# " and - split horizontally
+bind - split-window -v
+bind _ split-window -v -c "#{pane_current_path}"
+
+# Status bar details
 set -g status-left-length 40
 set -g status-right-length 150
-set -g window-status-activity-attr bold
-set -g message-attr bold
+
+set -g window-status-activity-style bold
+set -g message-style bold
 set -g window-status-format "#I #W "
-set -g status-left '#[fg=white,bg=black,bold] #S #[fg=yellow,bg=black,nobold] #H '
-set -g status-right '%Y-%m-%d %H:%M '
+set -g status-left '#[fg=yellow,bg=white,bold] #S #[fg=yellow,bg=white,nobold] #H '
+set -g status-right '#(pomodoro status) %Y-%m-%d %H:%M '
+set -g status-justify centre
+
+# 🍅
 set -g window-status-current-format " #I #W "
 
 unbind-key ^o
-
-#unbind Up
-#bind Up new-window -d -n tmux-zoom \; swap-pane -s tmux-zoom \; select-window -t tmux-zoom
-#unbind Down
-#bind Down last-window \; swap-pane -s tmux-zoom \; kill-window -t tmux-zoom
 
 #vim based pane navigation
 unbind-key j
@@ -40,34 +59,47 @@ bind-key h select-pane -L
 unbind-key l
 bind-key l select-pane -R
 
-# SOLARIZED COLOUR SCHEME (https://github.com/seebi/tmux-colors-solarized/blob/master/tmuxcolors-dark.conf)
+# SOLARIZED COLOUR SCHEME (https://github.com/seebi/tmux-colors-solarized/)
+
+#### COLOUR (Solarized light)
 
 # default statusbar colors
-set-option -g status-bg black #base02
-set-option -g status-fg yellow #yellow
-set-option -g status-attr default
+#light
+set-option -g status-style bg=white,fg=yellow,default
+#dark
+#set-option -g status-style bg=black,fg=yellow,default
 
 # default window title colors
-set-window-option -g window-status-fg brightblue #base0
-set-window-option -g window-status-bg default
-#set-window-option -g window-status-attr dim
+#light
+set-window-option -g window-status-style fg=brightyellow,bg=default,dim
+#dark
+#set-window-option -g window-status-style fg=brightblue,bg=default,dim
 
 # active window title colors
-set-window-option -g window-status-current-fg brightred #orange
-set-window-option -g window-status-current-bg default
-#set-window-option -g window-status-current-attr bright
+#light and dark
+set-window-option -g window-status-current-style fg=brightred,bg=white,bright
 
 # pane border
-set-option -g pane-border-fg black #base02
-set-option -g pane-active-border-fg brightgreen #base01
+set-option -g pane-border-style fg=white
+set-option -g pane-active-border-style fg=brightcyan
+#dark
+#set-option -g pane-border-style fg=black
+#set-option -g pane-active-border-style fg=brightgreen
 
 # message text
-set-option -g message-bg black #base02
-set-option -g message-fg brightred #orange
+#light
+set-option -g message-style bg=white,fg=brightred
+#dark
+#set-option -g message-style bg=black,fg=brightred
 
 # pane number display
-set-option -g display-panes-active-colour blue #blue
-set-option -g display-panes-colour brightred #orange
+set-option -g display-panes-active-colour blue
+set-option -g display-panes-colour brightred
 
 # clock
 set-window-option -g clock-mode-colour green #green
+
+# bell
+set-window-option -g window-status-bell-style fg=white,bg=red #base2, red
+#dark
+#set-window-option -g window-status-bell-style fg=black,bg=red #base2, red
