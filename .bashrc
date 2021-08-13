@@ -24,6 +24,11 @@ export EDITOR=/usr/bin/vim
 # Path tweaks for Puppet 6
 export PATH=$PATH:/opt/puppetlabs/bin
 
+# Path tweaks for Zeek
+if [[ -d /opt/zeek/bin ]]; then
+  export PATH=/opt/bin/zeek:$PATH
+fi
+
 # Ignore duplicate history entries
 HISTCONTROL=ignoreboth
 
