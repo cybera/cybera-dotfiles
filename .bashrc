@@ -26,7 +26,7 @@ export PATH=$PATH:/opt/puppetlabs/bin
 
 # Path tweaks for Zeek
 if [[ -d /opt/zeek/bin ]]; then
-  export PATH=/opt/bin/zeek:$PATH
+  export PATH=/opt/zeek/bin:$PATH
 fi
 
 # Ignore duplicate history entries
