@@ -49,6 +49,7 @@ alias rglance="for i in api registry; do service glance-\$i restart; done"
 alias rdesignate="for i in api agent central mdns pool-manager sink; do service designate-\$i restart; done"
 alias rneutron="for i in dhcp-agent l3-agent linuxbridge-agent metadata-agent server; do service neutron-\$i restart; done"
 alias st2_lookup="st2 run rac.project_artifacts"
+alias cdpuppet="cd /etc/puppetlabs/code/environments/production"
 
 function oscurl() {
   token=$(openstack token issue -c id -f value)
