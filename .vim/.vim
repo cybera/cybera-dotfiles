@@ -1,1 +1,0 @@
-/root/cybera-dotfiles/.vim

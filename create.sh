@@ -20,13 +20,13 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 # Install vim plugins
 mkdir -p ~/.vim/bundle
 cd ~/.vim/bundle
-git clone -q https://github.com/tpope/vim-fugitive
-git clone -q https://github.com/msanders/snipmate.vim snipmate
-git clone -q https://github.com/godlygeek/tabular
-git clone -q https://github.com/scrooloose/syntastic
-git clone -q https://github.com/rodjek/vim-puppet puppet
-git clone -q https://github.com/vim-ruby/vim-ruby
-git clone -q https://github.com/hallison/vim-markdown.git
-git clone -q https://github.com/fatih/vim-hclfmt
-git clone -q https://github.com/hashivim/vim-hashicorp-tools
-git clone -q https://github.com/zeek/vim-zeek
+git clone -q https://github.com/tpope/vim-fugitive 2>/dev/null
+git clone -q https://github.com/msanders/snipmate.vim snipmate 2>/dev/null
+git clone -q https://github.com/godlygeek/tabular 2>/dev/null
+git clone -q https://github.com/scrooloose/syntastic 2>/dev/null
+git clone -q https://github.com/rodjek/vim-puppet puppet 2>/dev/null
+git clone -q https://github.com/vim-ruby/vim-ruby 2>/dev/null
+git clone -q https://github.com/hallison/vim-markdown.git 2>/dev/null
+git clone -q https://github.com/fatih/vim-hclfmt 2>/dev/null
+git clone -q https://github.com/hashivim/vim-hashicorp-tools 2>/dev/null
+git clone -q https://github.com/zeek/vim-zeek 2>/dev/null
