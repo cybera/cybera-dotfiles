@@ -59,6 +59,21 @@ bind-key h select-pane -L
 unbind-key l
 bind-key l select-pane -R
 
+# Let's check out Option m/n for panes and M/N for windows...
+unbind m
+unbind n
+unbind M
+unbind N
+unbind Space
+bind -nr M-m select-pane -t :.+
+bind -nr M-n select-pane -t :.-
+bind -nr M-N prev
+bind -nr M-M next
+bind -r m select-pane -t :.+
+bind -r n select-pane -t :.-
+bind -r N prev
+bind -r M next
+
 # SOLARIZED COLOUR SCHEME (https://github.com/seebi/tmux-colors-solarized/)
 
 #### COLOUR (Solarized light)
