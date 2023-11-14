@@ -9,6 +9,8 @@ bind C-a send-prefix
 set -g status-keys vi
 setw -g mode-keys vi
 bind Escape copy-mode
+
+#Vim copy settings
 bind-key -T copy-mode-vi 'v' send-keys -X begin-selection
 bind-key -T copy-mode-vi 'y' send-keys -X copy-selection
 
@@ -28,7 +30,7 @@ bind y setw synchronize-panes
 # Panes!
 # % and | split vertically
 bind | split-window -h
-bind \ split-window -h -c "#{pane_current_path}"
+bind \\ split-window -h -c "#{pane_current_path}"
 # " and - split horizontally
 bind - split-window -v
 bind _ split-window -v -c "#{pane_current_path}"
@@ -40,8 +42,13 @@ set -g status-right-length 150
 set -g window-status-activity-style bold
 set -g message-style bold
 set -g window-status-format "#I #W "
-set -g status-left '#[fg=yellow,bg=white,bold] #S #[fg=yellow,bg=white,nobold] #H '
-set -g status-right '#(pomodoro status) %Y-%m-%d %H:%M '
+#light
+#set -g status-left '#[fg=yellow,bg=white,bold] #S #[fg=yellow,bg=white,nobold] #H '
+#set -g status-right '%Y-%m-%d %H:%M '
+#dark
+set -g status-left '#[fg=yellow,bg=default,bold] #S #[fg=yellow,bg=default,nobold] #H '
+set -g status-right '#[fg=yellow,bg=default,nobold] %Y-%m-%d %H:%M '
+
 set -g status-justify centre
 
 # 🍅
@@ -59,53 +66,41 @@ bind-key h select-pane -L
 unbind-key l
 bind-key l select-pane -R
 
-# Let's check out Option m/n for panes and M/N for windows...
-unbind m
-unbind n
-unbind M
-unbind N
-unbind Space
-bind -nr M-m select-pane -t :.+
-bind -nr M-n select-pane -t :.-
-bind -nr M-N prev
-bind -nr M-M next
-bind -r m select-pane -t :.+
-bind -r n select-pane -t :.-
-bind -r N prev
-bind -r M next
-
 # SOLARIZED COLOUR SCHEME (https://github.com/seebi/tmux-colors-solarized/)
 
 #### COLOUR (Solarized light)
 
 # default statusbar colors
 #light
-set-option -g status-style bg=white,fg=yellow,default
+#set-option -g status-style bg=white,fg=yellow,default
 #dark
-#set-option -g status-style bg=black,fg=yellow,default
+set-option -g status-style bg=black,fg=yellow,default
 
 # default window title colors
 #light
-set-window-option -g window-status-style fg=brightyellow,bg=default,dim
+#set-window-option -g window-status-style fg=brightyellow,bg=default,dim
 #dark
-#set-window-option -g window-status-style fg=brightblue,bg=default,dim
+set-window-option -g window-status-style fg=brightblue,bg=default,dim
+
 
 # active window title colors
-#light and dark
+#light
 set-window-option -g window-status-current-style fg=brightred,bg=white,bright
+#dark
+set-window-option -g window-status-current-style fg=brightred,bg=default,bright
 
 # pane border
-set-option -g pane-border-style fg=white
-set-option -g pane-active-border-style fg=brightcyan
+#set-option -g pane-border-style fg=white
+#set-option -g pane-active-border-style fg=brightcyan
 #dark
-#set-option -g pane-border-style fg=black
-#set-option -g pane-active-border-style fg=brightgreen
+set-option -g pane-border-style fg=black
+set-option -g pane-active-border-style fg=brightgreen
 
 # message text
 #light
-set-option -g message-style bg=white,fg=brightred
+#set-option -g message-style bg=white,fg=brightred
 #dark
-#set-option -g message-style bg=black,fg=brightred
+set-option -g message-style bg=black,fg=brightred
 
 # pane number display
 set-option -g display-panes-active-colour blue
@@ -115,6 +110,7 @@ set-option -g display-panes-colour brightred
 set-window-option -g clock-mode-colour green #green
 
 # bell
-set-window-option -g window-status-bell-style fg=white,bg=red #base2, red
+#set-window-option -g window-status-bell-style fg=white,bg=red #base2, red
 #dark
-#set-window-option -g window-status-bell-style fg=black,bg=red #base2, red
+set-window-option -g window-status-bell-style fg=black,bg=red #base2, red
+
