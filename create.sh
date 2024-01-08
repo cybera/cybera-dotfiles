@@ -29,6 +29,7 @@ git clone -q https://github.com/vim-ruby/vim-ruby 2>/dev/null
 git clone -q https://github.com/hallison/vim-markdown.git 2>/dev/null
 git clone -q https://github.com/fatih/vim-hclfmt 2>/dev/null
 git clone -q https://github.com/hashivim/vim-hashicorp-tools 2>/dev/null
+git clone -q https://github.com/fatih/vim-go.git 2>/dev/null
 git clone -q https://github.com/zeek/vim-zeek 2>/dev/null
 
 # Make a 0 the last exit code
