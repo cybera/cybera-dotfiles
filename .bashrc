@@ -53,6 +53,9 @@ alias rdesignate="for i in api agent central mdns pool-manager sink worker; do s
 alias rneutron="for i in dhcp-agent l3-agent linuxbridge-agent metadata-agent server; do service neutron-\$i restart; done"
 alias st2_lookup="st2 run rac.project_artifacts"
 alias cdpuppet="cd /etc/puppetlabs/code/environments/production"
+alias cdmaas="cd /var/snap/maas/current/preseeds"
+alias maasfiles="cd /var/www/maas_files"
+
 
 function oscurl() {
   token=$(openstack token issue -c id -f value)
