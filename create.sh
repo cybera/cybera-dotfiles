@@ -32,5 +32,9 @@ git clone -q https://github.com/hashivim/vim-hashicorp-tools 2>/dev/null
 git clone -q https://github.com/fatih/vim-go.git 2>/dev/null
 git clone -q https://github.com/zeek/vim-zeek 2>/dev/null
 
+# Vim Colours
+mkdir -p ~/.vim/colors
+curl -o ~/.vim/colors/toast.vim https://raw.githubusercontent.com/jsit/toast.vim/master/colors/toast.vim
+
 # Make a 0 the last exit code
 exit 0

@@ -12,7 +12,8 @@ set hidden
 call pathogen#infect()
 " set cursorline
 syntax on
-colorscheme desert
+set background=dark
+colorscheme toast
 
 " autoindent
 set autoindent|set cindent
