@@ -109,3 +109,4 @@ autocmd BufWritePre     * :call TrimWhiteSpace()
 
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_post_args='--ignore=W504,E501'
+let g:go_version_warning = 0
