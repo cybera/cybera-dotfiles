@@ -56,13 +56,13 @@ alias cdpuppet="cd /etc/puppetlabs/code/environments/production"
 alias cdmaas="cd /var/snap/maas/current/preseeds"
 alias maasfiles="cd /var/www/maas_files"
 
-+# SSH aliases
-+alias sshon='eval "$(ssh-agent)"'
-+alias sshoff="ssh-add -D"
-+
-+# Ansible aliases
-+alias ansibleon="source /opt/ansible/venv/bin/activate"
-+alias ansibleoff="deactivate"
+# SSH aliases
+alias sshon='eval "$(ssh-agent)"'
+alias sshoff="ssh-add -D"
+
+# Ansible aliases
+alias ansibleon="source /opt/ansible/venv/bin/activate"
+alias ansibleoff="deactivate"
 
 function oscurl() {
   token=$(openstack token issue -c id -f value)
