@@ -13,7 +13,7 @@ call pathogen#infect()
 " set cursorline
 syntax on
 set background=dark
-colorscheme toast
+colorscheme catppuccin_frappe
 
 " autoindent
 set autoindent|set cindent
