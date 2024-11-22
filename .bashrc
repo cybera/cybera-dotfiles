@@ -18,10 +18,6 @@ fi
 # tmux helpers
 alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f ~/.tmux.conf.mcjones'
 
-
-# vim aliases
-alias avim='vim -u ~/cybera-dotfiles/.ashleyvimrc'
-
 export EDITOR=/usr/bin/vim
 
 # Path tweaks for Puppet 6+
