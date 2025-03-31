@@ -2,8 +2,18 @@
   name = Cybera Sysadmin
   email = sysadmin@cybera.ca
 
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  df = diff
+  lg = log -p
+
 [core]
   filemode = false
+
+[init]
+  defaultbranch = main
 
 [color]
   ui = auto
@@ -12,12 +22,28 @@
   branch = auto
   interactive = auto
 
+[commit]
+  verbose = true
+
+[diff]
+  colormoved = true
+  renames = true
+  mnemonicprefix = true
+  algorithm = histogram
+
 [branch]
   autosetuprebase = always
   mergeoptions = --no-ff
+  sort = committerdate
+
+[tag]
+  sort = version:refname
 
 [pull]
   rebase = true
+
+[push]
+  default = simple
 
 [merge]
   log = true
@@ -26,16 +52,3 @@
 [mergetool "fugitive"]
   cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 
-[alias]
-  st = status
-  ci = commit
-  co = checkout
-  df = diff
-  lg = log -p
-
-# Uncomment once we upgrade git past 1.7.9.11 (currently 1.7.9.5 installed with LTS - no reason to upgrade ahead of LTS schedule)
-#[push]
-#  default = simple
-
-[push]
-	default = simple
