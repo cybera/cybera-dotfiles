@@ -40,6 +40,8 @@ function la() {
 # App aliases
 alias megacli='/root/bin/Linux/opt/MegaRAID/MegaCli/MegaCli64'
 
+alias k='kubectl'
+
 # OpenStack aliases
 alias rnova="for i in api conductor novncproxy scheduler; do service nova-\$i restart; done; service apache2 restart;"
 alias rswift="for i in account-auditor account account-reaper account-replicator container-auditor container container-replicator container-updater object-auditor object object-replicator object-updater; do service swift-\$i restart; done"
