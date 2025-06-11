@@ -30,11 +30,6 @@ git clone -q https://github.com/hallison/vim-markdown.git 2>/dev/null
 git clone -q https://github.com/fatih/vim-hclfmt 2>/dev/null
 git clone -q https://github.com/hashivim/vim-hashicorp-tools 2>/dev/null
 git clone -q https://github.com/fatih/vim-go.git 2>/dev/null
-# Hack due to 18.04
-cd vim-go
-git co v1.28
-cd ..
-git clone -q https://github.com/zeek/vim-zeek 2>/dev/null
 
 # Vim Colours
 mkdir -p ~/.vim/colors
