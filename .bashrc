@@ -1,13 +1,3 @@
-# Source a local file if it exists
-if [ -f ~/.bashrc.local ]; then
-  source ~/.bashrc.local
-fi
-
-uname=$(uname)
-if [[ "${uname}" == "Linux" ]]; then
-  export PATH=~/cybera-dotfiles/bin:/snap/bin:~/.local/bin:$PATH
-fi
-
 # Set a basic prompt
 if [ $UID -eq 0 ]; then
     PS1="[ \u@\h \w ] # "
@@ -15,32 +5,26 @@ else
     PS1="[ \u@\h \w ] $ "
 fi
 
-# tmux helpers
-alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f ~/.tmux.conf.mcjones'
+uname=$(uname)
+if [[ "${uname}" == "Linux" ]]; then
+  export PATH=~/cybera-dotfiles/bin:/snap/bin:~/.local/bin:$PATH
+fi
 
 export EDITOR=/usr/bin/vim
 
 # Path tweaks for Puppet 6+
 export PATH=$PATH:/opt/puppetlabs/bin
 
-# Path tweaks for Zeek
-if [[ -d /opt/zeek/bin ]]; then
-  export PATH=/opt/zeek/bin:$PATH
-fi
-
 # Ignore duplicate history entries
 HISTCONTROL=ignoreboth
 
-# LXC aliases
-alias lls="lxc ls"
-function la() {
-  lxc exec $1 bash
-}
+# tmux helpers
+alias tmuxmicheal='tmux -S /tmp/mcjones.tmux -f ~/.tmux.conf.mcjones'
 
 # App aliases
 alias megacli='/root/bin/Linux/opt/MegaRAID/MegaCli/MegaCli64'
-
 alias k='kubectl'
+alias lls="lxc ls"
 
 # OpenStack aliases
 alias rnova="for i in api conductor novncproxy scheduler; do service nova-\$i restart; done; service apache2 restart;"
@@ -54,13 +38,22 @@ alias cdpuppet="cd /etc/puppetlabs/code/environments/production"
 alias cdmaas="cd /var/snap/maas/current/preseeds"
 alias maasfiles="cd /var/www/maas_files"
 
+# Source a local file if it exists
+if [ -f ~/.bashrc.local ]; then
+  source ~/.bashrc.local
+fi
+
+## Functions
+function la() {
+  lxc exec $1 bash
+}
+
 function oscurl() {
   token=$(openstack token issue -c id -f value)
   curl -s -H "X-Auth-Token:$token" $1
 }
 
 function forgetnode { puppetserver ca clean --certname $1; puppet node deactivate $1; puppet node clean $1; }
-function forgetnode6 { puppetserver ca clean --certname $1; puppet node deactivate $1; puppet node clean $1; }
 
 function newsshhost {
   ssh-keygen -f ~/.ssh/known_hosts -R $1
